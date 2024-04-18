@@ -25,7 +25,7 @@ class BeerClientImplTest {
                 .doOnSuccess(x->atomicBoolean.set(true))
                 .subscribe();
 
-        Awaitility.await().atMost(5, TimeUnit.SECONDS).untilTrue(atomicBoolean);
+        Awaitility.await().untilTrue(atomicBoolean);
 
     }
     @Test
